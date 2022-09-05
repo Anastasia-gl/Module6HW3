@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+    backend:
+        image: 507658e7e5a4
+        build: ./web
+        ports:
+            - "7029:80"
+        container_name: web
+    frontend:
+        image: 59948bfa476e
+        build: ./my-app
+        ports:
+            - "3000:3000"
+        container_name: react
